@@ -14,9 +14,10 @@ export default Ember.Component.extend({
         image: this.get('image'),
         date: moment().format('MMM Do YYYY'),
         text: this.get('article'),
+        category: this.get('category')
       };
       this.set('newBlogForm', false);
       this.sendAction("saveArticle", params);
-    }
+    },
   }
 });

@@ -1,0 +1,4 @@
+{{#each categories as |category|}}
+  <p>{{category.title}}</p>
+  {{new-blog-tile saveArticle='saveArticle' category=category}}
+{{/each}}

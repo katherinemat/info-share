@@ -13,6 +13,10 @@ export default Ember.Route.extend({
         return article.save();
       });
       this.transitionTo('article', article);
+    },
+    deleteComment(comment, article) {
+      comment.destroyRecord();
+      this.transitionTo('article', article);
     }
   }
 });

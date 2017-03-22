@@ -2,17 +2,29 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll("article");
+    return Ember.RSVP.hash({
+      articles: this.store.findAll("article"),
+      categories: this.store.findAll('category')
+    })
   },
   actions: {
     saveArticle(params) {
       var newBlog = this.store.createRecord('article', params);
-      newBlog.save();
+      var category = params.category;
+      category.get('articles').addObject(newBlog);
+      newBlog.save().then(function(){
+        return category.save();
+      })
       this.transitionTo('dash');
     },
 
     delete(article) {
-      article.destroyRecord();
+      var comment_deletions = article.get('comments').map(function(comment) {
+        return comment.destroyRecord();
+      });
+      Ember.RSVP.all(comment_deletions).then(function(){
+        return article.destroyRecord();
+      });
       this.transitionTo('dash');
     }
   }

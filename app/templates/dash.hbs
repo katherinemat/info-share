@@ -1,5 +1,5 @@
 <h2>Dashboard</h2>
 
-{{new-blog-tile saveArticle='saveArticle'}}
+{{category-tile saveArticle='saveArticle' categories=model.categories}}
 
-{{dash-blog-tile model=model delete="delete"}}
+{{dash-blog-tile article=model.articles category=model.categories delete="delete"}}

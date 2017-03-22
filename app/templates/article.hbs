@@ -5,6 +5,6 @@
 <p>{{model.text}}</p>
 
 {{#each model.comments as |comment|}}
-  {{comment-tile comment=comment}}
+  {{comment-tile comment=comment deleteComment='deleteComment' model=model}}
 {{/each}}
 {{new-comment-tile saveComment="saveComment" model=model}}

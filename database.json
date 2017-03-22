@@ -1,24 +1,34 @@
-{ "articles": [{
-    "title": "Here’s Paul Ryan, Druggy",
-    "author": "Anonymous",
-    "image": "https://previews.123rf.com/images/themorningglory/themorningglory1607/themorningglory160700741/60671435-Colorful-giant-rooster-on-green-nature-under-tree-background-Stock-Photo.jpg",
-    "text": "The order that opening tags appear and ending tags appear follow an important rule. If an HTML tag is opened within another, for example the body tag is opened inside the html tag, then that tag(body) must close before the outter(html) tag is closed. We ended the body tag first because it was opened most recently. This rule of 'closing the most recent tag before closing older tags' applies to all HTML tags.",
-    "date": "January 28th, 2017"
-  }, {
-    "title": "Here’s Paul Ryan Grinning and Unemployed",
-    "author": "Anonymous",
-    "image": "https://previews.123rf.com/images/themorningglory/themorningglory1607/themorningglory160700741/60671435-Colorful-giant-rooster-on-green-nature-under-tree-background-Stock-Photo.jpg",
-    "text": "The order that opening tags appear and ending tags appear follow an important rule. If an HTML tag is opened within another, for example the body tag is opened inside the html tag, then that tag(body) must close before the outter(html) tag is closed. We ended the body tag first because it was opened most recently. This rule of 'closing the most recent tag before closing older tags' applies to all HTML tags.",
-    "date": "January 28th, 2017"
-  }],
-  "categories" : [{
+{ "categories" : [{
     "title": "Tech"
   }, {
     "title": "Humor"
-  }],
-  "comments" : [{
-    "comment": "great explanation. i can understand the concepts much better now"
   }, {
-    "comment": "should go into depth about theory behind routes. overall, 2/5"
+    "title": "Tutorial"
+  }, {
+    "title": "Rant"
+  }, {
+    "title": "C#"
+  }, {
+    "title": "JavaScript"
+  }, {
+    "title": "Java"
+  }, {
+    "title": "C++"
+  }, {
+    "title": "Ruby"
+  }, {
+    "title": "PHP"
+  }, {
+    "title": "Rails"
+  }, {
+    "title": "Drupal"
+  }, {
+    "title": "CSS/Design"
+  }, {
+    "title": "HTML"
+  }, {
+    "title": "Misc"
+  }, {
+    "title": "Projects"
   }]
 }
