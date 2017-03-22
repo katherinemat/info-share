@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('contact');
   this.route('dash');
   this.route('update', {path: '/update/:article_id'});
-  this.route('article');
+  this.route('article', {path: '/article/:article_id'});
 });
 
 export default Router;
