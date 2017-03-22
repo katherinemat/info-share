@@ -3,3 +3,8 @@
 <p>{{model.date}}</p>
 <img src={{model.image}} alt={{model.title}}>
 <p>{{model.text}}</p>
+
+{{#each model.comments as |comment|}}
+  {{comment-tile comment=comment}}
+{{/each}}
+{{new-comment-tile saveComment="saveComment" model=model}}
