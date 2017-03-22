@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('dash');
-  this.route('update');
+  this.route('update', {path: '/update/:article_id'});
   this.route('article');
 });
 

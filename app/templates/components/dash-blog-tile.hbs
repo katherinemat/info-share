@@ -1,4 +1,5 @@
 {{#each model as |blog|}}
   <p>{{blog.title}}</p>
   <button {{action 'delete' blog}}>Delete</button>
+  {{#link-to 'update' blog.id}}<button>Update</button>{{/link-to}}
 {{/each}}
