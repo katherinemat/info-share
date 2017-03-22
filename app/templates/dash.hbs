@@ -1,5 +1,11 @@
 <h2>Dashboard</h2>
-
-{{category-tile saveBlog='saveBlog' categories=model.categories}}
-
-{{dash-blog-tile article=model.articles category=model.categories delete="delete"}}
+<div class="row">
+  <div class="col-md-6">
+    <h3>Categories</h3>
+    {{category-tile saveBlog='saveBlog' categories=model.categories}}
+  </div>
+  <div class="col-md-6">
+    <h3>Posts</h3>
+    {{dash-blog-tile article=model.articles category=model.categories delete="delete"}}
+  </div>
+</div>
