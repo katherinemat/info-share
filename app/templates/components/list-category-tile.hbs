@@ -1,0 +1,5 @@
+<h3>Categories</h3>
+
+{{#each categories as |category|}}
+  {{#link-to 'category-articles' category.id}}{{category.title}}{{/link-to}}
+{{/each}}

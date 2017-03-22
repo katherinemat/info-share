@@ -1,3 +1,6 @@
-{{#each model as |blog|}}
+{{#each model.articles as |blog|}}
   {{index-blog-tile blog=blog}}
 {{/each}}
+
+<hr>
+{{list-category-tile categories=model.categories}}
