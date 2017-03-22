@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         title: this.get('title'),
         author: this.get('author'),
         image: this.get('image'),
-        date: this.get('date'),
+        date: moment().format('MMM Do YYYY'),
         text: this.get('article'),
       };
       this.set('newBlogForm', false);

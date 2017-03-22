@@ -6,13 +6,14 @@ export default Ember.Route.extend({
   },
   actions: {
     update(article) {
+      // declare params variable here because not defined through component. comes directly from update route
       var params = {
-                title: this.get('title'),
-                author: this.get('author'),
-                date: this.get('date'),
-                image: this.get('image'),
-                article: this.get('article'),
-            };
+        title: this.get('title'),
+        author: this.get('author'),
+        date: this.get('date'),
+        image: this.get('image'),
+        article: this.get('article'),
+      };
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           article.set(key,params[key]);
