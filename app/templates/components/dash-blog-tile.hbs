@@ -1,3 +1,4 @@
 {{#each model as |blog|}}
   <p>{{blog.title}}</p>
+  <button {{action 'delete' blog}}>Delete</button>
 {{/each}}

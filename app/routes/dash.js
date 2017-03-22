@@ -9,6 +9,11 @@ export default Ember.Route.extend({
       var newBlog = this.store.createRecord('article', params);
       newBlog.save();
       this.transitionTo('dash');
+    },
+
+    delete(article) {
+      article.destroyRecord();
+      this.transitionTo('dash');
     }
   }
 });
