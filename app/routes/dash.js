@@ -3,7 +3,9 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
-      articles: this.store.findAll("article"),
+      articles: this.store.findAll("article").then(function(results) {
+        return results.toArray().reverse();
+      }),
       categories: this.store.findAll('category')
     });
   },

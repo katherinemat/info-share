@@ -3,6 +3,8 @@
   {{#each article as |blog|}}
     <div class="post">
       <h4>{{blog.title}}</h4>
+      <p>{{blog.author}}</p>
+      <p>{{blog.date}}</p>
       <button {{action 'delete' blog}}>Delete</button>
       {{#link-to 'update' blog.id}}<button>Update</button>{{/link-to}}
     </div>
