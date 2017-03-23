@@ -3,23 +3,23 @@
 <div>
   <form>
     <div class="form-group">
-      <label for="title">Title</label>
-      {{input value=title id="title"}}
+      <label for="title">Title</label><br>
+      {{input value=title class="title form-control"}}
     </div>
 
     <div class="form-group">
-      <label for="author">Author</label>
-      {{input value=author id="author"}}
+      <label for="author">Author</label><br>
+      {{input value=author class="author form-control"}}
     </div>
 
     <div class="form-group">
-      <label for="image">Image URL</label>
-      {{input value=image id="image"}}
+      <label for="image">Image URL</label><br>
+      {{input value=image class="image form-control"}}
     </div>
 
     <div class="form-group">
       <label for="article">Article</label><br>
-      {{textarea row="6" col="200" value=article id="article"}}
+      {{textarea rows="15" value=article class="article form-control"}}
     </div>
 
     <button {{action 'saveBlog'}}>Save</button>

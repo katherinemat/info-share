@@ -1,5 +1,10 @@
-{{#each article as |blog|}}
-  <p>{{blog.title}}</p>
-  <button {{action 'delete' blog}}>Delete</button>
-  {{#link-to 'update' blog.id}}<button>Update</button>{{/link-to}}
-{{/each}}
+<div class="dash-posts">
+  <h3>Posts</h3>
+  {{#each article as |blog|}}
+    <div class="post">
+      <h4>{{blog.title}}</h4>
+      <button {{action 'delete' blog}}>Delete</button>
+      {{#link-to 'update' blog.id}}<button>Update</button>{{/link-to}}
+    </div>
+  {{/each}}
+</div>
