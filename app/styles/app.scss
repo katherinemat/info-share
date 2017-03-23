@@ -10,6 +10,7 @@ $background: #2d2d2d;
 body {
   font-family: 'Raleway', sans-serif;
   background: $background;
+  height: 100%;
 }
 
 
@@ -17,6 +18,7 @@ body {
 header {
   border-bottom: 1px solid $main;
   margin-top: 4%;
+  margin-bottom: 4%;
   padding-left: 10%;
   a, p {
     margin-top: -2%;
@@ -73,6 +75,14 @@ header {
 // Categories Pane
 
 .categories {
+  position: fixed;
+  height: 100vh;
+  text-align: right;
+  right: 0;
+  top: 0;
+  padding: 10% 5% 0 4%;
+  background: $background;
+  border-left: 1px solid $main;
   h3, a {
     color: white;
   }
