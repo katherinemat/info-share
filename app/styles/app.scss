@@ -1,21 +1,94 @@
+@import "ember-bootstrap/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 $accent: black;
 $main: #d8d8d8;
 $shadow: #a0a0a0;
+$background: #2d2d2d;
 
-.home-image {
-  max-height: 200px;
-}
-
+//Main Tags
 body {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif;
+  background: $background;
 }
 
-header, footer {
-  margin-left: 2%;
+
+// Header
+header {
+  border-bottom: 1px solid $main;
+  margin-top: 4%;
+  padding-left: 10%;
+  a, p {
+    margin-top: -2%;
+    margin-bottom: 4%;
+    color: white;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  a:hover{
+    color: #aaaaaa;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .navlink {
+    margin: 0 1% 0 1%;
+  }
 }
 
+.tagline {
+  position: relative;
+  top: -65px;
+  left: 20px;
+  color: white;
+  margin-left: 10%;
+}
+
+//Logo
+.main {
+  position: relative;
+  top: 22px;
+  left: 1%;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  background: orange;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 10px #f73d3d,
+              0 0 0 20px #6d6d6d;
+}
+
+.title, .title:hover, .title:visited, .title:active, .title:link {
+  position: relative;
+  text-decoration: none;
+  top: -90px;
+  left: 10px;
+  color: white;
+}
+
+// Categories Pane
+
+.categories {
+  h3, a {
+    color: white;
+  }
+
+  a {
+    color: orange;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+
+}
+
+// Blog Posts
 .blog-posts {
   background-color: $main;
   margin-bottom: 1%;
@@ -26,17 +99,15 @@ header, footer {
 .blog-posts:hover {
   position: relative;
   left: 4px;
-  box-shadow: 3px 3px 5px $shadow;
+  box-shadow: 3px 3px 5px $accent;
 }
 
 img {
-  border: 1px solid $accent !important;
+  border: 1px solid $accent;
   border-radius: 3px;
-  max-width: 40% !important;
+  max-width: 40%;
 }
 
 .index-blog-pane {
   margin: 5% 5% 5% 5%;
 }
-
-@import "ember-bootstrap/bootstrap";
