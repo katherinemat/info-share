@@ -1,6 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  // var provider = new firebase.auth.GoogleAuthProvider();
   var ENV = {
     torii: {
       sessionServiceName: 'session'
