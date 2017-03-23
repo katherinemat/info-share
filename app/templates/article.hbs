@@ -1,10 +1,21 @@
-<h2>{{model.title}}</h2>
-<h3>{{model.author}}</h3>
-<p>{{model.date}}</p>
-<img src={{model.image}} alt={{model.title}}>
-<p>{{model.text}}</p>
-
-{{#each model.comments as |comment|}}
-  {{comment-tile comment=comment deleteComment='deleteComment' model=model}}
-{{/each}}
-{{new-comment-tile saveComment="saveComment" model=model}}
+<div class="article">
+  <div class="row">
+    <h2>{{model.title}}</h2>
+    <h3>-{{model.author}} | {{model.date}}</h3>
+  </div>
+  <div class="row article-image">
+    <img src={{model.image}} alt={{model.title}}>
+  </div>
+  <div class="row article-text">
+    <p>{{model.text}}</p>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-md-5 comments">
+      {{#each model.comments as |comment|}}
+      {{comment-tile comment=comment deleteComment='deleteComment' model=model}}
+      {{/each}}
+      {{new-comment-tile saveComment="saveComment" model=model}}
+    </div>
+  </div>
+</div>
