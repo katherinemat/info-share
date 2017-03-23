@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    torii: {
+      sessionServiceName: 'session'
+    },
     modulePrefix: 'info-share',
     environment: environment,
     rootURL: '/',
