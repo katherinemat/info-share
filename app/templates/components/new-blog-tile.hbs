@@ -1,5 +1,5 @@
 {{#if newBlogForm}}
-<h3>New Blog in {{category.title}}</h3>
+<h3 {{action 'blogFormShow'}}>- New Blog in {{category.title}}</h3>
 <div>
   <form>
     <div class="form-group">
@@ -26,5 +26,5 @@
   </form>
 </div>
 {{else}}
-  <button class="btn" {{action 'blogFormShow'}}>New Story</button>
+  <h3 {{action 'blogFormShow'}}>+ {{category.title}}</h3>
 {{/if}}

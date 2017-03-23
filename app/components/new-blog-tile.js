@@ -4,7 +4,11 @@ export default Ember.Component.extend({
   newBlogForm: false,
   actions: {
     blogFormShow() {
-      this.set('newBlogForm', true);
+      if(this.newBlogForm){
+        this.set('newBlogForm', false);
+      } else {
+        this.set('newBlogForm', true);
+      }
     },
 
     saveBlog() {

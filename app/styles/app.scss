@@ -1,5 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+$accent: black;
+$main: #d8d8d8;
+$shadow: #a0a0a0;
+
 .home-image {
   max-height: 200px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+header, footer {
+  margin-left: 2%;
+}
+
+.blog-posts {
+  background-color: $main;
+  margin-bottom: 1%;
+  padding: 1% 1% 5% 6%;
+  border: 1px solid $accent;
+}
+
+.blog-posts:hover {
+  position: relative;
+  left: 4px;
+  box-shadow: 3px 3px 5px $shadow;
+}
+
+img {
+  border: 1px solid $accent !important;
+  border-radius: 3px;
+  max-width: 40% !important;
+}
+
+.index-blog-pane {
+  margin: 5% 5% 5% 5%;
 }
 
 @import "ember-bootstrap/bootstrap";

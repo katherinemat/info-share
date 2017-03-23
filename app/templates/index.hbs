@@ -1,6 +1,14 @@
-{{#each model.articles as |blog|}}
-  {{index-blog-tile blog=blog}}
-{{/each}}
-
-<hr>
-{{list-category-tile categories=model.categories}}
+<div class="row">
+  <div class="col-md-8">
+    <div class="index-blog-pane">
+      {{#each model.articles as |blog|}}
+        {{index-blog-tile blog=blog}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="categories">
+      {{list-category-tile categories=model.categories}}
+    </div>
+  </div>
+</div>
