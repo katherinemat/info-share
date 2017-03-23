@@ -1,9 +1,8 @@
 @import "ember-bootstrap/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
-$accent: black;
-$main: #d8d8d8;
-$shadow: #a0a0a0;
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Raleway');
+$main: #eaeaea;
+$accent: #d8d8d8;
+$shadow: black;
 $background: #2d2d2d;
 
 //Main Tags
@@ -16,7 +15,7 @@ body {
 
 // Header
 header {
-  border-bottom: 1px solid $main;
+  border-bottom: 1px solid $accent;
   margin-top: 4%;
   margin-bottom: 4%;
   padding-left: 10%;
@@ -46,6 +45,7 @@ header {
   left: 20px;
   color: white;
   margin-left: 10%;
+  font-family: 'Orbitron', sans-serif;
 }
 
 //Logo
@@ -70,6 +70,7 @@ header {
   top: -90px;
   left: 10px;
   color: white;
+  font-family: 'Orbitron', sans-serif;
 }
 
 // Categories Pane
@@ -82,7 +83,7 @@ header {
   top: 0;
   padding: 10% 5% 0 4%;
   background: $background;
-  border-left: 1px solid $main;
+  border-left: 1px solid $accent;
   h3, a {
     color: white;
   }
@@ -99,25 +100,45 @@ header {
 }
 
 // Blog Posts
-.blog-posts {
-  background-color: $main;
-  margin-bottom: 1%;
-  padding: 1% 1% 5% 6%;
-  border: 1px solid $accent;
-}
-
-.blog-posts:hover {
-  position: relative;
-  left: 4px;
-  box-shadow: 3px 3px 5px $accent;
-}
-
-img {
-  border: 1px solid $accent;
-  border-radius: 3px;
-  max-width: 40%;
-}
 
 .index-blog-pane {
   margin: 5% 5% 5% 5%;
+
+  .blog-posts {
+    background-color: $main;
+    margin-bottom: 1%;
+    border: 1px solid $accent;
+
+    h3 {
+      font-size: 35px;
+    }
+
+    .blog-teaser {
+      white-space: nowrap;
+      overflow: hidden;
+      word-wrap: break-word;
+      max-height: 100%;
+      max-width: 100%;
+      text-overflow: ellipsis;
+    }
+
+    .image-div{
+      height: 200px;
+      overflow: hidden;
+      margin-left: -2%;
+
+      img {
+        border-radius: 3px;
+        max-width: 100%;
+
+      }
+    }
+
+  }
+
+  .blog-posts:hover {
+    position: relative;
+    left: 4px;
+    box-shadow: 3px 3px 5px $shadow;
+  }
 }

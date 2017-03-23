@@ -1,5 +1,10 @@
-{{#link-to 'article' blog.id}}<div class="blog-posts">
-  <h3>{{blog.title}}</h3>
-  <p>{{blog.author}} — {{blog.date}}</p>
-  <img class="home-image" src={{blog.image}} alt={{blog.title}}>
+{{#link-to 'article' blog.id}}<div class="blog-posts row">
+  <div class="col-md-5 image-div">
+    <img class="home-image" src={{blog.image}} alt={{blog.title}}>
+  </div>
+  <div class="col-md-7">
+    <h3>{{blog.title}}</h3>
+    <p>{{blog.author}} — {{blog.date}}</p>
+    <p class="blog-teaser">{{blog.text}}</p>
+  </div>
 </div>{{/link-to}}

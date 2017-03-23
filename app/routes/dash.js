@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       articles: this.store.findAll("article"),
       categories: this.store.findAll('category')
-    })
+    });
   },
   actions: {
     saveBlog(params) {
@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       category.get('articles').addObject(newBlog);
       newBlog.save().then(function(){
         return category.save();
-      })
+      });
       this.transitionTo('dash');
     },
 
